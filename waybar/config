@@ -1,0 +1,62 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 32,
+    "spacing": 0,
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "memory",
+        "cpu",
+        "clock",
+        "tray"
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}"
+    },
+    "sway/mode": {
+        "format": " {} "
+    },
+    "sway/window": {
+        "format": " {title} ",
+        "max-length": 50
+    },
+    "pulseaudio": {
+        "format": "<span color='#95bbad'>VOL </span>{volume}%",
+        "format-muted": "<span color='#95bbad'>VOL </span>Muted",
+        "on-click": "pavucontrol"
+    },
+    "backlight": {
+        "format": "<span color='#d8a657'>LGT </span>{percent}%",
+        "on-scroll-up": "brightnessctl set 5%+",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "battery": {
+        "format": "<span color='#ce999a'>BAT </span>{capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    "memory": {
+        "format": "<span color='#ce999a'>RAM </span>{}%"
+    },
+    "cpu": {
+        "format": "<span color='#d8a657'>CPU </span>{}%"
+    },
+    "clock": {
+        "format": "<span color='#95bbad'>{:%H:%M}</span>"
+    },
+    "tray": {
+        "spacing": 4
+    }
+}

@@ -1,0 +1,53 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "UbuntuMono Nerd Font";
+    font-size: 18.5px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #242724;
+    color: #dfd0b8;
+}
+
+/* Emulate the Polybar '|' separator */
+#pulseaudio, #backlight, #battery, #memory, #cpu, #clock, #tray {
+    padding: 0 12px;
+    border-left: 1px solid #5a524c;
+    margin: 4px 0;
+}
+
+#window {
+    padding: 0 12px;
+    color: #dfd0b8;
+}
+
+/* --- Sway Workspaces (Your i3 Equivalent) --- */
+#workspaces button {
+    padding: 0 10px;
+    color: #dfd0b8;
+    background: transparent;
+    /* Invisible border to prevent shifting when active */
+    border-top: 2px solid transparent; 
+}
+
+/* Focused workspace: alt background and primary overline */
+#workspaces button.focused {
+    background-color: #3a3f3a;
+    border-top: 2px solid #95bbad;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    background-color: #ce999a;
+    color: #242724;
+}
+
+/* --- Resize Mode Indicator --- */
+#mode {
+    background-color: #ce999a;
+    color: #242724;
+    padding: 0 10px;
+    font-weight: bold;
+}
