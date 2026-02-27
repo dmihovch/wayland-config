@@ -2,7 +2,15 @@
 set $mod Mod1
 
 # Font choice (Using FiraCode instead of JetBrains Mono)
-font pango:UbuntuMono Nerd Font 11
+font pango:UbuntuMono Nerd Font 18
+
+
+#Specific to desktop
+output HDMI-A-3 resolution 1920x1080@120Hz position 0 0
+output DP-1 resolution 1920x1080@144Hz position 1920 0
+workspace 1 output DP-1
+workspace 10 output HDMI-A-3
+#Specific to desktop end
 
 # --- Native Sway-isms (Replacing X11 tools) ---
 
@@ -167,6 +175,9 @@ client.background       #242724
 # --- Status Bar ---
 
 # Replace Polybar: Native Waybar integration
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 bar {
     swaybar_command waybar
 }
