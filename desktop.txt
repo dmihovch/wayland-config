@@ -1,9 +1,9 @@
-nvidia-drm.modeset=1 on the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub
+nvidia-drm.modeset=1 nvidia-drm.fbdev=1 on the GRUB_CMDLINE_LINUX_DEFAULT line in /etc/default/grub
 
 run sudo update-grub and reboot
 
 edit /usr/share/wayland-sessions/sway.desktop
-change Exec line to Exec=env WLR_NO_HARDWARE_CURSORS=1 sway --unsupported-gpu
+change Exec line to Exec=env WLR_NO_HARDWARE_CURSORS=1 WLR_RENDERER=vulkan LIBVA_DRIVER_NAME=nvidia XWAYLAND_NO_GLAMOR=1 sway --unsupported-gpu
 
 systemctl --user mask xdg-desktop-portal-gnome
 systemctl --user mask xdg-desktop-portal-gtk

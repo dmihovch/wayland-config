@@ -6,7 +6,7 @@ font pango:UbuntuMono Nerd Font 18
 
 
 #Specific to desktop
-output HDMI-A-3 resolution 1920x1080@120Hz position 0 0
+output HDMI-A-3 resolution 1920x1080@60Hz position 0 0
 output DP-1 resolution 1920x1080@144Hz position 1920 0
 workspace 1 output DP-1
 workspace 10 output HDMI-A-3
